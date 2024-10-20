@@ -16,8 +16,16 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from rest_framework import routers
+from users.views import UserView
+from rest_framework_simplejwt.views import TokenObtainPairView
+
+router = routers.DefaultRouter()
+router.register(r"users", UserView, basename="users")
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("api/v1/", include(router.urls)),
+    path("api/v1/login/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
 ]

@@ -2,6 +2,10 @@ from django.contrib.auth.models import BaseUserManager
 
 
 class UserManager(BaseUserManager):
+    """
+    Custom user manager where email is the unique identifiers
+    """
+
     def _create_user(self, email, password=None, **extra_fields):
         if not email:
             raise ValueError("Email field must be set")
