@@ -5,7 +5,7 @@ from .models import Expense
 class ExpenseAdmin(admin.ModelAdmin):
     list_display = (
         "title",
-        "amount",
+        "total_amount",
         "paid_by",
         "created_at",
     )
