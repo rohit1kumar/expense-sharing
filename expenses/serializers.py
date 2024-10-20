@@ -4,6 +4,8 @@ from users.serializers import UserSerializer
 
 
 class ExpenseSplitSerializer(serializers.ModelSerializer):
+    # user = UserSerializer()
+
     class Meta:
         model = ExpenseSplit
         fields = ("user", "amount", "percentage")
