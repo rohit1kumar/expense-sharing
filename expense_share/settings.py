@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 import os
 from datetime import timedelta
+from dotenv import load_dotenv
+load_dotenv()
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -23,12 +25,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-yq(ikz^5=+1qb@6p8arr)qv*0pu^1#t_i((o*7a!+l%^*mbx9t"
-
+SECRET_KEY = os.getenv(
+    "SECRET_KEY", "django-insecure-yq(ikz^5=+1qb@6p8arr)qv*0pu^1#t_i((o*7a!+l%^*mbx9t"
+)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ENVIRONMENT = os.getenv("ENVIRONMENT")
+if ENVIRONMENT == "production":
+    DEBUG = False
+
+print(f"Evironment: {ENVIRONMENT}", f"Debug: {DEBUG}")
+
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -151,3 +160,6 @@ SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(days=10),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=10),
 }
+
+
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
