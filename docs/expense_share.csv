@@ -1,0 +1,6 @@
+Date,Transaction ID,Title,Type,User's Email,User's Name,Amount
+2024-10-21 02:34 PM,2e3b6d67-b4b8-44f5-8202-be3bf072b620,Dinner @MacD,Pay To,aman@gmail.com,aman,500.00
+2024-10-21 02:35 PM,3f3b7d67-c5c8-55g6-9303-ce4bf083c721,Goa trip,Receive from,sonu@gmail.com,sonu,5000.00
+,,,,,Total Amount to Receive,5000.00
+,,,,,Total Amount to Pay,500.00
+,,,,,Net Balance,4500.00
