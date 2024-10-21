@@ -16,6 +16,12 @@
 - PostgreSQL
 
 ## Database Design
+![Database Design](docs/db_design.svg)
 
+## Setup & Runing
+1. Clone the repository `git clone https://github.com/rohit1kumar/expense-sharing.git`
+2. Create a `.env` using `cp .env.example .env` and update the values.
+3. Install dependencies using Poetry `poetry install` or `pip install -r requirements.txt`
+4. Run the server using `python manage.py runserver`
 
-[API Documentation](docs/api_docs.md)
+### [API Documentation](docs/api_docs.md)
