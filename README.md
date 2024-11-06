@@ -33,4 +33,4 @@ docker-compose exec web python manage.py migrate
 
 ### [API Documentation](docs/api_docs.md)
 
-[<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](https://app.getpostman.com/run-collection/20980024-01bfda48-3b9e-475e-937d-f01829d3b60f?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D20980024-01bfda48-3b9e-475e-937d-f01829d3b60f%26entityType%3Dcollection%26workspaceId%3D4df5b592-4a65-4992-8825-7a46837413ca)
+[<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](https://app.getpostman.com/run-collection/20980024-01bfda48-3b9e-475e-937d-f01829d3b60f?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D20980024-01bfda48-3b9e-475e-937d-f01829d3b60f%26entityType%3Dcollection%26workspaceId%3Dfb130ba8-5a6b-4e2e-96df-3c87dd829d25)
